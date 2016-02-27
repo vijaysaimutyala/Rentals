@@ -1,20 +1,19 @@
 package abc.com.example.vijsu.rentals.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
 
+import abc.com.example.vijsu.rentals.Activities.FlatDetailsActivity;
 import abc.com.example.vijsu.rentals.Beans.AdPost;
 import abc.com.example.vijsu.rentals.CustomItemClickListener;
 import abc.com.example.vijsu.rentals.R;
@@ -38,11 +37,14 @@ public class RVAdapterForPost extends RecyclerView.Adapter<RVAdapterForPost.Post
             rentAmt = (TextView)itemView.findViewById(R.id.txt_rent);
             noOfBeds = (TextView)itemView.findViewById(R.id.txt_noOfBedRooms);
             tenants = (TextView)itemView.findViewById(R.id.txt_for_gender);
+            location = (TextView)itemView.findViewById(R.id.txt_location);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     switch (v.getId()){
                         case R.id.parent_list_dummy:
+                            Intent intent = new Intent(v.getContext(), FlatDetailsActivity.class);
+                            v.getContext().startActivity(intent);
                             Toast.makeText(v.getContext(), "Post clicked. Taking to other activity...", Toast.LENGTH_SHORT).show();
                             break;
                     }
@@ -71,7 +73,7 @@ public class RVAdapterForPost extends RecyclerView.Adapter<RVAdapterForPost.Post
         holder.rentAmt.setText(adPost.getRentAmt());
         holder.tenants.setText(adPost.getTenants());
         holder.noOfBeds.setText(adPost.getNoOfBeds());
-
+        holder.location.setText(adPost.getLocation());
     }
 
     @Override

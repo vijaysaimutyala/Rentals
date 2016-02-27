@@ -1,18 +1,3 @@
-<!--<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="abc.com.example.vijsu.rentals.Activities.PostAFlatActivity"
-    tools:showIn="@layout/activity_post_aflat">
-
-</RelativeLayout>-->
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
@@ -66,7 +51,7 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior"
         <RadioButton
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Girls."
+            android:text="Girls"
             android:id="@+id/mston"
             android:layout_weight="1"/>
 
@@ -152,11 +137,14 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
     <Spinner
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
+        android:id="@+id/RoomsAvailableEditTxt"
         android:inputType="number"
         android:ems="10"
+        android:padding="5dp"
+        android:entries="@array/noOfRooms"
         android:layout_gravity="center"
-        android:id="@+id/RoomsAvailableEditTxt"
+        android:background="@drawable/rectangle"
         android:layout_weight="1"/>
 
 </LinearLayout>
@@ -324,7 +312,8 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:weightSum="2"
     android:layout_marginTop="10dp"
     android:id="@+id/linearLayout7"
-    android:layout_below="@id/line6">
+    android:layout_below="@id/line6"
+    android:focusableInTouchMode="true">
 
     <TextView
         android:layout_width="wrap_content"
@@ -338,8 +327,9 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
     <EditText
         android:layout_width="10dp"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
         android:inputType="number"
+        android:padding="5dp"
         android:ems="10"
         android:background="@drawable/rectangle"
         android:layout_gravity="center"
@@ -376,16 +366,13 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:paddingStart="10dp"
         android:paddingLeft="10dp"
         android:inputType="textMultiLine"
-        android:hint="Specify any details"
-        android:textColorHint="#000000"/>
-
-
+        android:hint="Specify any details"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Submit"
-        android:id="@+id/submitBtn"
+        android:id="@+id/btn_submitBtn"
         android:layout_gravity="center"/>
 
 </LinearLayout>

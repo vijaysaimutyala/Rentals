@@ -16,7 +16,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
-        android:textSize="25sp"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        android:typeface="serif"
+        android:textStyle="bold|italic"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
     <LinearLayout
@@ -27,17 +30,27 @@
         android:layout_marginTop="125dp">
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:padding="5dp"
             android:hint="@string/usernname"
-            android:id="@+id/edt_username"/>
+            android:id="@+id/edt_username"
+            android:background="@drawable/edit_text_style"
+            android:drawableLeft="@drawable/person"
+            android:drawablePadding="5dp"
+            android:textColor="#000000"/>
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:padding="5dp"
             android:hint="@string/pin"
             android:inputType="numberPassword"
             android:id="@+id/edt_pin"
             android:maxLength="4"
-            android:layout_marginTop="25dp"/>
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edit_text_style"
+            android:drawableLeft="@drawable/pin"
+            android:drawablePadding="5dp"
+            android:textColor="#000000"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

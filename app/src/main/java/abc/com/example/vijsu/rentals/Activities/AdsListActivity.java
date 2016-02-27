@@ -1,5 +1,8 @@
 package abc.com.example.vijsu.rentals.Activities;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -28,6 +31,14 @@ public class AdsListActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ads_list);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.filterFab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent intent = new Intent(view.getContext(),FilterForSearchActivity.class);
+               startActivity(intent);
+            }
+        });
         recyclerView = (RecyclerView)findViewById(R.id.postsRecyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -55,5 +66,10 @@ public class AdsListActivity extends AppCompatActivity{
         adPost.add(new AdPost("A23-202","25000/-","Men","Mangalore Towers","3 BHK"));
     }
 
-
+/*
+    @Override
+    public void onItemClick(View v, int position) {
+        Intent intent = new Intent(v.getContext(),FlatDetailsActivity.class);
+        startActivity(intent);
+    }*/
 }
