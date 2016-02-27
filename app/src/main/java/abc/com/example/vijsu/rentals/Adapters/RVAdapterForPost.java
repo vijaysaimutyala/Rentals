@@ -27,7 +27,7 @@ public class RVAdapterForPost extends RecyclerView.Adapter<RVAdapterForPost.Post
     private Context context;
     CustomItemClickListener listener;
     public class PostsViewHolder extends RecyclerView.ViewHolder {
-        public TextView flatNo,rentAmt,availableFrom,tenants;
+        public TextView flatNo,rentAmt,noOfBeds,tenants,location;
         public CardView cardView;
         public LinearLayout linearLayout;
         public PostsViewHolder(View itemView) {
@@ -36,7 +36,7 @@ public class RVAdapterForPost extends RecyclerView.Adapter<RVAdapterForPost.Post
             cardView = (CardView)itemView.findViewById(R.id.dummy_card_post);
             flatNo = (TextView)itemView.findViewById(R.id.txt_flatno);
             rentAmt = (TextView)itemView.findViewById(R.id.txt_rent);
-            availableFrom = (TextView)itemView.findViewById(R.id.txt_available_from);
+            noOfBeds = (TextView)itemView.findViewById(R.id.txt_noOfBedRooms);
             tenants = (TextView)itemView.findViewById(R.id.txt_for_gender);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -68,9 +68,10 @@ public class RVAdapterForPost extends RecyclerView.Adapter<RVAdapterForPost.Post
     public void onBindViewHolder(PostsViewHolder holder, int position) {
         AdPost adPost = postList.get(position);
         holder.flatNo.setText(adPost.getFlatNo());
-        holder.availableFrom.setText(adPost.getAvailableFrom());
         holder.rentAmt.setText(adPost.getRentAmt());
         holder.tenants.setText(adPost.getTenants());
+        holder.noOfBeds.setText(adPost.getNoOfBeds());
+
     }
 
     @Override

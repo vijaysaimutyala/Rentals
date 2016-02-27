@@ -6,14 +6,32 @@ package abc.com.example.vijsu.rentals.Beans;
 public class AdPost {
     String flatNo;
     String rentAmt;
-    String availableFrom;
     String tenants;
+    String location;
+    String noOfBeds;
 
-    public AdPost(String flatNo, String rentAmt, String availableFrom, String tenants) {
+    public AdPost(String flatNo, String rentAmt, String tenants, String location,String noOfBeds) {
         this.flatNo = flatNo;
         this.rentAmt = rentAmt;
-        this.availableFrom = availableFrom;
         this.tenants = tenants;
+        this.location = location;
+        this.noOfBeds = noOfBeds;
+    }
+
+    public String getNoOfBeds() {
+        return noOfBeds;
+    }
+
+    public void setNoOfBeds(String noOfBeds) {
+        this.noOfBeds = noOfBeds;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public AdPost() {
@@ -33,14 +51,6 @@ public class AdPost {
 
     public void setRentAmt(String rentAmt) {
         this.rentAmt = rentAmt;
-    }
-
-    public String getAvailableFrom() {
-        return availableFrom;
-    }
-
-    public void setAvailableFrom(String availableFrom) {
-        this.availableFrom = availableFrom;
     }
 
     public String getTenants() {

@@ -59,6 +59,8 @@ public class PostLoginActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_postAd:
+                Intent intentPost = new Intent(PostLoginActivity.this,PostAFlatActivity.class);
+                startActivity(intentPost);
                 Toast.makeText(PostLoginActivity.this, "Taking to post activity", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btn_wantAFlat:

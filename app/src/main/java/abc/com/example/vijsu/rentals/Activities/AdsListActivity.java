@@ -44,15 +44,15 @@ public class AdsListActivity extends AppCompatActivity{
 
     private void initializeData(List<AdPost> adPostList) {
         adPost = adPostList;
-        adPost.add(new AdPost("A15-202","15000/-","March","Men"));
-        adPost.add(new AdPost("A19-202","16000/-","April","Women"));
-        adPost.add(new AdPost("A16-202","17000/-","May","Family"));
-        adPost.add(new AdPost("A17-202","18000/-","June","Men"));
-        adPost.add(new AdPost("A18-202","19000/-","July","Family"));
-        adPost.add(new AdPost("A20-202","21000/-","August","Women"));
-        adPost.add(new AdPost("A21-202","22000/-","September","Women"));
-        adPost.add(new AdPost("A22-202","23000/-","October","Women"));
-        adPost.add(new AdPost("A23-202","25000/-","November","Men"));
+        adPost.add(new AdPost("A15-202","15000/-","Men","Singapore Township","2 BHK"));
+        adPost.add(new AdPost("A19-202","16000/-","Women","Malaysian Township","3 BHK"));
+        adPost.add(new AdPost("A16-202","17000/-","Family","AB Township","2 BHK"));
+        adPost.add(new AdPost("A17-202","18000/-","Men","Chennai Apartments","2 BHK"));
+        adPost.add(new AdPost("A18-202","19000/-","Family","Bangalore Towers","3 BHK"));
+        adPost.add(new AdPost("A20-202","21000/-","Women","Mysore Towers","2 BHK"));
+        adPost.add(new AdPost("A21-202","22000/-","Women","Jaipur Flats","1 BHK"));
+        adPost.add(new AdPost("A22-202","23000/-","Women","Chandigarh Flats","2 BHK"));
+        adPost.add(new AdPost("A23-202","25000/-","Men","Mangalore Towers","3 BHK"));
     }
 
 

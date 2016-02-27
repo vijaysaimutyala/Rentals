@@ -29,6 +29,10 @@
         <activity
             android:name=".Activities.MyAdsActivity"
             android:label="@string/title_activity_my_ads"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.PostAFlatActivity"
+            android:label="@string/title_activity_post_aflat"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
